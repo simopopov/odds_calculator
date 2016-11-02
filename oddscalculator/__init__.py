@@ -1,7 +1,7 @@
 class OddsCalculator:
 	def __init__(self, odds):
 		if type(odds) not in(float, int) or not odds:
-			message = "{} is not a valid decimal odds".format(odds)
+			message = "{} is not a valid odds".format(odds)
 			raise ValueError(message)
 		self.decimal = None
 		self.malay = None
