@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='oddscalculator',
-      version='0.1',
+      version='0.2',
       description='Calculator for decimal, malay, american, hongkong, indonesian odds',
       url='https://github.com/simopopov/odds_calculator.git',
       author='Simeon Popov',

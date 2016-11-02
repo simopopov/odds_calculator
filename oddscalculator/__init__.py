@@ -14,13 +14,13 @@ class OddsCalculator:
 			american = (-100.0)/(self.decimal - 1.0)
 		else:
 			american = (self.decimal - 1.0) * 100.0
-		return int(round(american))
+		return round(american, 2)
 
 	def decimal_to_hongkong(self):
 		hongkong = self.decimal-1
 		return round(hongkong, 2)
 
-	def dectimal_to_malay(self):
+	def decimal_to_malay(self):
 		malay = self.decimal -1 if self.decimal <=2 else 1.0 / (1.0-self.decimal)
 		return round(malay, 2)
 
@@ -29,16 +29,14 @@ class OddsCalculator:
 		return round(indonesian, 2)
 
 	def malay_to_decimal(self):
-		if self.malay <= 1.0 and self.malay != 0.0:
-			decimal = self.malay + 1.0 if self.malay > 0.0 else 1.0 - (1.0/self.malay)
-		decimal = round(self.malay, 2)
-		return decimal
+		decimal = self.malay + 1.0 if self.malay > 0.0 else 1.0 - (1.0 / self.malay)
+		return round(decimal, 2)
 
 	def american_to_decimal(self):
 		if self.american >=0:
-			return (float(self.american)/100.0) + 1.0
+			return round((float(self.american)/100.0) + 1.0, 2)
 		else:
-			return (100.0/float(self.american)) + 1.0
+			return round(100.0/float(abs(self.american)) + 1.0, 2)
 
 	def hongkong_to_decimal(self):
 		return round(self.hongkong + 1.0, 2)
@@ -54,7 +52,7 @@ class DecimalOdds(OddsCalculator):
 	def __init__(self, odds):
 		OddsCalculator.__init__(self, odds)
 		self.decimal = odds
-		self.malay = self.dectimal_to_malay()
+		self.malay = self.decimal_to_malay()
 		self.american = self.decimal_to_american()
 		self.hongkong = self.decimal_to_hongkong()
 		self.indonesian = self.decimal_to_indonesian()
@@ -82,7 +80,7 @@ class HongkongOdds(OddsCalculator):
 		OddsCalculator.__init__(self, odds)
 		self.hongkong = odds
 		self.decimal = self.hongkong_to_decimal()
-		self.malay = self.dectimal_to_malay()
+		self.malay = self.decimal_to_malay()
 		self.american = self.decimal_to_american()
 		self.indonesian = self.decimal_to_indonesian()
 
@@ -91,9 +89,6 @@ class IndonesianOdds(OddsCalculator):
 		OddsCalculator.__init__(self, odds)
 		self.indonesian = odds
 		self.decimal = self.indonesian_to_decimal()
-		self.malay = self.dectimal_to_malay()
+		self.malay = self.decimal_to_malay()
 		self.american = self.decimal_to_american()
 		self.hongkong = self.decimal_to_hongkong()
-		
-
-a = IndonesianOdds(None)
