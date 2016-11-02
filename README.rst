@@ -5,7 +5,7 @@ Simply install via pip:
 
 pip install oddscalculator
 
-You can check the `documentation <https://pythonhosted.org/oddscalculator/>`
+You can check the `documentation <https://pythonhosted.org/oddscalculator/>`_
 
 To use oddscalculator, simply do::
 
