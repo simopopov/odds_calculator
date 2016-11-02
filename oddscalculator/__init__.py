@@ -1,5 +1,8 @@
 class OddsCalculator:
 	def __init__(self, odds):
+		if type(odds) not in(float, int) or not odds:
+			message = "{} is not a valid decimal odds".format(odds)
+			raise ValueError(message)
 		self.decimal = None
 		self.malay = None
 		self.american = None
@@ -93,6 +96,4 @@ class IndonesianOdds(OddsCalculator):
 		self.hongkong = self.decimal_to_hongkong()
 		
 
-
-def joke():
-	return "Are be"
+a = IndonesianOdds(None)

@@ -10,3 +10,10 @@ To use oddscalculator, simply do::
     >>> print odds.malay
     >>> print odds.indonesian
     >>> print odds.hongkong
+
+    >>> odds = AmericanOdds(-130)
+    >>> print odds.decimal
+    >>> print odds.american
+    >>> print odds.malay
+    >>> print odds.indonesian
+    >>> print odds.hongkong
