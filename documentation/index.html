@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <meta name="Odds Calculator" content="">
+      <meta name="Simeon Popov" content="">
+      <title>Odds Calculator Documentation</title>
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <style type="text/css">
+         /* Space out content a bit */
+         body {
+         padding-top: 20px;
+         padding-bottom: 20px;
+         }
+         /* Everything but the jumbotron gets side spacing for mobile first views */
+         .header,
+         .marketing,
+         .footer {
+         padding-right: 15px;
+         padding-left: 15px;
+         }
+         /* Custom page header */
+         .header {
+         padding-bottom: 20px;
+         border-bottom: 1px solid #e5e5e5;
+         }
+         /* Make the masthead heading the same height as the navigation */
+         .header h3 {
+         margin-top: 0;
+         margin-bottom: 0;
+         line-height: 40px;
+         }
+         /* Custom page footer */
+         .footer {
+         padding-top: 19px;
+         color: #777;
+         border-top: 1px solid #e5e5e5;
+         }
+         /* Customize container */
+         @media (min-width: 768px) {
+         .container {
+         max-width: 730px;
+         }
+         }
+         .container-narrow > hr {
+         margin: 30px 0;
+         }
+         /* Main marketing message and sign up button */
+         .jumbotron {
+         text-align: center;
+         border-bottom: 1px solid #e5e5e5;
+         }
+         .jumbotron .btn {
+         padding: 14px 24px;
+         font-size: 21px;
+         }
+         /* Supporting marketing content */
+         .marketing {
+         margin: 40px 0;
+         }
+         .marketing p + h4 {
+         margin-top: 28px;
+         }
+         /* Responsive: Portrait tablets and up */
+         @media screen and (min-width: 768px) {
+         /* Remove the padding we set earlier */
+         .header,
+         .marketing,
+         .footer {
+         padding-right: 0;
+         padding-left: 0;
+         }
+         /* Space out the masthead */
+         .header {
+         margin-bottom: 30px;
+         }
+         /* Remove the bottom border on the jumbotron for visual effect */
+         .jumbotron {
+         border-bottom: 0;
+         }
+         }
+      </style>
+      <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="highlighter.js" crossorigin="anonymous"></script>
+      <script type="text/javascript">$.SyntaxHighlighter.init();</script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="header clearfix">
+            <nav>
+               <ul class="nav nav-pills pull-right">
+                  <li role="presentation" class="active"><a href="">Home</a></li>
+                  <li role="presentation"><a href="#usage">Usage</a></li>
+               </ul>
+            </nav>
+            <h3 class="text-muted">Odds Calculator</h3>
+         </div>
+         <div class="jumbotron">
+            <h1>Source code</h1>
+            <p class="lead">You can find the source code in github</p>
+            <p><a class="btn btn-lg btn-success" href="https://github.com/simopopov/odds_calculator" role="button">See in github</a></p>
+         </div>
+         <div class="row" id="installing">
+            <h1>Installing</h1>
+            You can install it via pip:
+            <p><b>pip install oddscalculator</b></p>
+         </div>
+         <div class="row" id="usage">
+            <h1>Usage</h1>
+            To use oddscalculator, simply do:
+            <p>
+            <pre class="language-python">
+from oddscalculator import *
+
+odds = DecimalOdds(1.72)
+print odds.decimal
+print odds.american
+print odds.malay
+print odds.indonesian
+print odds.hongkong
+
+odds = AmericanOdds(-139)
+print odds.decimal
+print odds.american
+print odds.malay
+print odds.indonesian
+print odds.hongkong
+
+odds = MalayOdds(0.72)
+print odds.decimal
+print odds.american
+print odds.malay
+print odds.indonesian
+print odds.hongkong
+
+odds = IndonesianOdds(0.72)
+print odds.decimal
+print odds.american
+print odds.malay
+print odds.indonesian
+print odds.hongkong
+
+odds = HongkongOdds(-1.39)
+print odds.decimal
+print odds.american
+print odds.malay
+print odds.indonesian
+print odds.hongkong
+</pre>
+            </p>
+         </div>
+         <footer class="footer">
+            <p>&copy; Simeon Popov</p>
+         </footer>
+      </div>
+   </body>
+</html>

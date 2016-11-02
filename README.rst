@@ -5,6 +5,8 @@ Simply install via pip:
 
 pip install oddscalculator
 
+You can check the `documentation <https://pythonhosted.org/oddscalculator/>`
+
 To use oddscalculator, simply do::
 
     >>> from oddscalculator import DecimalOdds, MalayOdds, AmericanOdds, IndonesianOdds, HongkongOdds
