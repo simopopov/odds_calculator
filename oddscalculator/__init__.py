@@ -94,8 +94,5 @@ class IndonesianOdds(OddsCalculator):
 		
 
 
-a = IndonesianOdds(-1.04)
-print (a.decimal)
-print (a.malay)
-print (a.american)
-print (a.hongkong)
+def joke():
+	return "Are be"
