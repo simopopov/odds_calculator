@@ -1,1 +1,1 @@
-from .odds_calculator import *
+from .odds_calculator import OddsCalculator, DecimalOdds
